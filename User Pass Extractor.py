@@ -1,4 +1,4 @@
-name = input("Enter the name of your Combos :")
+name = input("Enter the name of your Combos: ")
 
 try:
     with open(name, errors="ignore", encoding="utf-8") as file:
@@ -12,7 +12,7 @@ try:
                 try:
                     user = combo.split("\n")[0].split(":")[0].split("@")[0]
                     password = combo.split("\n")[0].split(":")[1]
-                    savefile.write(f"{user}: {password}\n")
+                    savefile.write(f"{user}:{password}\n")
                 except Exception:
                     pass
         else:
